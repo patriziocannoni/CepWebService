@@ -14,13 +14,6 @@ import br.com.cannoni.cepwebservice.dao.RequisicaoDAO;
 @Repository
 public final class RequisicaoDAOsql extends AbstractSqlDAO implements RequisicaoDAO {
 
-	/**
-	 * Construtor.
-	 */
-	private RequisicaoDAOsql() {
-		super();
-	}
-
 	@Override
 	public void verificarRequisicao(final String enderecoIp) {
 		jdbcTemplate.update("call cep.sp_verifica_requisicao (?)", enderecoIp);

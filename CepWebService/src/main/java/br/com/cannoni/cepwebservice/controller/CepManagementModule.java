@@ -29,13 +29,6 @@ public final class CepManagementModule {
 	@Autowired
 	private EnderecoDAO enderecoDAO;
 
-	/**
-	 * Construtor.
-	 */
-	public CepManagementModule() {
-		super();
-	}
-
 	@GET
 	@Path("/enderecoPorCep/{cep}")
 	public Response obterEnderecoPorCep(@PathParam("cep") Long cep) {

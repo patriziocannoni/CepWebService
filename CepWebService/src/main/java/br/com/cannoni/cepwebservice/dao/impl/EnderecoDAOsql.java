@@ -20,13 +20,6 @@ import br.com.cannoni.cepwebservice.dominio.Uf;
 @Repository
 public final class EnderecoDAOsql extends AbstractSqlDAO implements EnderecoDAO {
 
-	/**
-	 * Construtor.
-	 */
-	private EnderecoDAOsql() {
-		super();
-	}
-
 	@Override
 	public Endereco obterEnderecoPorCep(final Long cep) {
 		Endereco enderecoRetorno = new Endereco();
