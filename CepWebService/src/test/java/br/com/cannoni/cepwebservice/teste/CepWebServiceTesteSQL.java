@@ -3,6 +3,7 @@ package br.com.cannoni.cepwebservice.teste;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ import br.com.cannoni.cepwebservice.dominio.Uf;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:applicationContext.xml"})
+@Ignore
 public class CepWebServiceTesteSQL {
 
 	@Autowired
