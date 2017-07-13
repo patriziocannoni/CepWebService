@@ -1,5 +1,8 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_sel_logradouro_por_nome_e_uf`(IN paramNome varchar(70), IN paramUf varchar(2))
+
+DROP PROCEDURE IF EXISTS sp_sel_logradouro_por_nome_e_uf;
+
+CREATE DEFINER=root@localhost PROCEDURE sp_sel_logradouro_por_nome_e_uf (IN paramNome varchar(70), IN paramUf varchar(2))
 BEGIN
 	select
 		log_log.LOG_NOME as logradouro,

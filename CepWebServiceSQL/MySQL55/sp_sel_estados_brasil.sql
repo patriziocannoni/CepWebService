@@ -1,5 +1,8 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_sel_estados_brasil`()
+
+DROP PROCEDURE IF EXISTS sp_sel_estados_brasil;
+
+CREATE DEFINER=root@localhost PROCEDURE sp_sel_estados_brasil()
 begin
 	
 	select

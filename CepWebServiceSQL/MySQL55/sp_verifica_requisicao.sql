@@ -1,5 +1,8 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_verifica_requisicao`(IN enderecoIp VARCHAR(45))
+
+DROP PROCEDURE IF EXISTS sp_verifica_requisicao;
+
+CREATE DEFINER=root@localhost PROCEDURE sp_verifica_requisicao(IN enderecoIp VARCHAR(45))
 BEGIN
 
 declare dataHoraAnterior DATETIME;

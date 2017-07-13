@@ -1,5 +1,8 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_sel_logradouro_por_cep`(IN paramCep int)
+
+DROP PROCEDURE IF EXISTS sp_sel_logradouro_por_cep;
+
+CREATE DEFINER=root@localhost PROCEDURE sp_sel_logradouro_por_cep(IN paramCep int)
 begin
 	
 	declare cep_log_logradouro int;
