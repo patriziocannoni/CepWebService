@@ -34,7 +34,7 @@ public final class EnderecoDAOsql extends AbstractSqlDAO implements EnderecoDAO 
 			enderecoRetorno.setEnderecoCompleto((String) mapa.get("endereco"));
 			enderecoRetorno.setLocalidade((String) mapa.get("localidade"));
 			enderecoRetorno.setLogradouro((String) mapa.get("logradouro"));
-			enderecoRetorno.setUf((String) mapa.get("UF"));
+			enderecoRetorno.setUf((String) mapa.get("uf.codigo"));
 		}
 
 		return enderecoRetorno;
@@ -68,8 +68,8 @@ public final class EnderecoDAOsql extends AbstractSqlDAO implements EnderecoDAO 
 		List<Map<String, Object>> listaObjetos = jdbcTemplate.queryForList("call cep.sp_sel_estados_brasil");
 		for (Map<String, Object> mapa : listaObjetos) {
 			Uf uf = new Uf();
-			uf.setCodigo(mapa.get("CODIGO_UF").toString());
-			uf.setNome(mapa.get("NOME_UF").toString());
+			uf.setCodigo(mapa.get("codigo").toString());
+			uf.setNome(mapa.get("nome").toString());
 			lista.add(uf);
 		}
 
